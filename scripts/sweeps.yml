@@ -1,0 +1,63 @@
+program: train_sweeps.py
+name: epochs_sweeps_5
+method: random
+metric:
+  goal: maximize
+  name: validation_accuracy
+parameters:
+  max_epochs:
+    values: [7,8,9,10]
+  num_workers:
+    values: [11,12,13,14,15,16,17,18,19,20]
+
+# program: train_sweeps.py
+# name: sweeps_3
+# method: random
+# metric:
+#   goal: maximize
+#   name: validation_accuracy
+# parameters:
+#   kernel_size:
+#     values: [1,2,3,4,5]
+#   depth:
+#     min: 2
+#     max: 4
+#   pool_sizes:
+#     values: [[5,5,2], [5,5,3], [5,4,2],[4,5,2]]
+    
+
+# program: train_sweeps.py
+# name: cs-175-final-project
+# method: grid
+# metric:
+#   goal: maximize
+#   name: validation_accuracy
+# parameters:
+#   kernel_size:
+#     values: [1,2,3,4,5]
+
+# program: train_sweeps.py
+# name: cs-175-final-project
+# method: random
+# metric:
+#   goal: maximize
+#   name: validation_accuracy
+# parameters:
+#   depth:
+#     min: 1
+#     max: 4
+#   kernel_size:
+#     values: [3,4]
+# # please use this file to define the parameters for the sweep you would like to run
+# program: train.py
+# name: cs175hw3
+# program: train_sweeps.py
+# method: grid
+# metric:
+#   goal: maximize
+#   name: accuracy
+# parameters:
+#   learning_rate:
+#     values: [0.001, 0.01, 0.1]
+#   batch_size:
+#     values: [32, 64, 128]
